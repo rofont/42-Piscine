@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 10:57:08 by rofontai          #+#    #+#             */
-/*   Updated: 2022/09/30 09:56:57 by rofontai         ###   ########.fr       */
+/*   Created: 2022/10/03 09:27:40 by rofontai          #+#    #+#             */
+/*   Updated: 2022/10/05 16:08:35 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strdup(char *src)
+char *ft_strjoin(int size, char **strs, char *sep);
+
+int main(void)
 {
-	int		i;
-	int		l;
-	char	*dest;
-
-	l = 0;
-	while (src[l] != '\0')
-		l++;
-	dest = (char *)malloc(sizeof(dest) * (l + 1));
-	if (dest == NULL)
-		return (0);
-	i = 0;
-	while (i < l)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    char *str[] = {"Il", "etait", "une", "fois"};
+    
+    printf("%s\n", ft_strjoin(4, str, "-_-"));
+    return (0);
 }

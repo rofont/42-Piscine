@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofontai <rofontai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 10:57:08 by rofontai          #+#    #+#             */
-/*   Updated: 2022/09/30 09:56:57 by rofontai         ###   ########.fr       */
+/*   Created: 2022/09/30 10:13:56 by rofontai          #+#    #+#             */
+/*   Updated: 2022/10/03 10:49:13 by rofontai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
-{
-	int		i;
-	int		l;
-	char	*dest;
+int *ft_range(int min, int max);
 
-	l = 0;
-	while (src[l] != '\0')
-		l++;
-	dest = (char *)malloc(sizeof(dest) * (l + 1));
-	if (dest == NULL)
-		return (0);
-	i = 0;
-	while (i < l)
+int		main()
+{
+	int start;
+	int end;
+
+	start = 10;
+	end = 20;
+	int *array;
+
+	array = ft_range(start, end);
+	int i = 0;
+	while(i < end - start)
 	{
-		dest[i] = src[i];
+		printf("%d", array[i]);
+        printf("\n");
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+    free(array);
+    return (0);
 }
