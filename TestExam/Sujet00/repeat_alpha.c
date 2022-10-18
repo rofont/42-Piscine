@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romainfontaine <romainfontaine@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 08:20:03 by rofontai          #+#    #+#             */
-/*   Updated: 2022/10/13 13:54:06 by romainfonta      ###   ########.fr       */
+/*   Created: 2022/10/06 19:51:48 by romainfonta       #+#    #+#             */
+/*   Updated: 2022/10/06 19:53:35 by romainfonta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(void)
+int main(int argc, char **argv)
 {
-    write(1, "a", 1);
-    write(1,"\n", 1);
+
+    return (0);
 }
